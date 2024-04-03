@@ -41,7 +41,7 @@ class App extends Component {
 
       this.props.loggedIn(self.currentPlayer);
 
-      self.socket = io('https://aliens-go-home-backend.onrender.com', {
+      self.socket = io(process.env.REACT_APP_BACKEND_URL, {
         query: `token=${Auth0.getAccessToken()}`,
       });
 
