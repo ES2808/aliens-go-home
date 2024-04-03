@@ -10,7 +10,7 @@ Configure the library that will validate the access tokens in your API.
 Validating a token means that you are certain you can trust it's contents.
 */
 const client = jwksClient({
-    jwksUri: "https://kook.eu.auth0.com/.well-known/jwks.json"
+    jwksUri: "https://es2808.us.auth0.com/.well-known/jwks.json"
 });
 //Removed fake players
 const players = [];
@@ -53,7 +53,8 @@ io.on('connection', (socket) => {
   socket.on('new-max-score', newMaxScoreHandler);
 });
 
-http.listen(3005, () => {
+const PORT = process.env.PORT || 3001; 
+http.listen(PORT, () => {
   console.log('listening on port 3001');
 });
 
