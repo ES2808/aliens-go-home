@@ -9,7 +9,7 @@ import io from 'socket.io-client';
 Auth0.configure({
   domain: 'es2808.us.auth0.com',
   clientID: 'ZUE3XVeVekCbVIsS6aQ5PhvwHtbS8rXw',
-  redirectUri: 'https://aliens-go-home.onrender.com', 'https://aliens-go-home-three.vercel.app/',
+  redirectUri: 'https://aliens-go-home-three.vercel.app/',
   responseType: 'token id_token',
   scope: 'openid profile manage:points',
   audience: 'https://aliens-go-home.api.com',
